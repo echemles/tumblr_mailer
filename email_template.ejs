@@ -1,0 +1,24 @@
+<html>
+  <meta charset="utf-8">
+</head>
+  <body>
+    <p>Hi <%= firstName %>,</p>
+    <p>
+      It's been <%= numMonthsSinceContact %> months since we've last caught up. How are things? I've been learning to code at Fullstack Academy and it's been quite the ride so far. This email was actually generated with a script I'm working on for school.
+    <p>
+      I've been blogging about my experiences at Fullstack on my blog. 
+      Check out my latest post in the link below: 
+      <ul>
+        <% for(var i=0; i<latestPosts.length; i++) {%>
+        <li><a href=<%= latestPosts[i].post_url %>> <%= latestPosts[i].title %></a></li>
+        <% } %>
+      </ul>
+      You can find all of my other posts at <a href="http://lesterechem.tumblr.com">lesterechem.tumblr.com<a>.
+    </p>
+    <p>
+      Warm regards,
+      <br>
+      Lester
+    </p>
+  </body>
+</html>
